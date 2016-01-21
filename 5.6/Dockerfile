@@ -2,8 +2,10 @@ FROM ubuntu:trusty
 MAINTAINER Fernando Mayo <fernando@tutum.co>, Feng Honglin <hfeng@tutum.co>
 
 # Add MySQL configuration
-ADD my.cnf /etc/mysql/conf.d/my.cnf
-ADD mysqld_charset.cnf /etc/mysql/conf.d/mysqld_charset.cnf
+#ADD my.cnf /etc/mysql/conf.d/my.cnf
+#ADD mysqld_charset.cnf /etc/mysql/conf.d/mysqld_charset.cnf
+ADD my.cnf /my.cnf
+ADD mysqld_charset.cnf /mysqld_charset.cnf
 
 RUN apt-get update && \
     apt-get -yq install mysql-server-5.6 pwgen && \
